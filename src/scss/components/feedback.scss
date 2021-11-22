@@ -1,0 +1,31 @@
+@mixin alert ($red,$green,$blue){
+    background-color: rgba($red,$green,$blue, 0.5);
+    border:1px solid rgba($red,$green,$blue, 1);
+    margin-bottom: 10px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.c-feedback{
+    &.warning{
+        @include alert(255,165,80);
+    }
+    &.error{
+        @include alert(255, 1, 1);
+    }
+    &.succes{
+        @include alert(21, 255, 0);    
+    }
+}
+//optie2
+// .c-feedback.warning{
+//     @include alert(255,165,80);
+//   }
+  
+//   .c-feedback.error{
+//       @include alert(255, 1, 1);
+//   }
+  
+//   .c-feedback.succes{
+//       @include alert(21, 255, 0);    
+//   }
